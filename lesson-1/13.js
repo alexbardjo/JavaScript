@@ -1,16 +1,10 @@
-// let n = 1000;
-// let num = 5;
-//     x = n/(2**num);
-//     console.log(x);
+let number = 1000;
+let res = number;
+let num = 0;
 
-let n = 1000;
-Label: while (n >= 50) {
-     let result = n/2;
-     if (result < 50) {
-        console.log(result);
-        break;
-     } else {
-         continue Label;
-     }
- }
- 
+while (res > 50){
+    res = res/2;
+    num++;
+}
+
+console.log( 'result' + res + 'iterations' + num)
