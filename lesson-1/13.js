@@ -6,5 +6,5 @@ while (res > 50){
     res = res/2;
     num++;
 }
-
-console.log( 'result' + res + 'iterations' + num)
+console.log( 'result' + res)
+console.log('iterations' + num)
