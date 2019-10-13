@@ -25,9 +25,6 @@
 
 function validate(array) {
 
-    
- 
-     
      if (typeof array !== 'object' ) {
  
          throw new Error('message is not  object type')
