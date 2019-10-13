@@ -23,14 +23,29 @@
 
 
 
+function validate(array) {
+
+    
+ 
+     
+     if (typeof array !== 'object' ) {
+ 
+         throw new Error('message is not  object type')
+ 
+     }
+ }
+
+
 
 const collect = function(array) {
 
+    validate(array);
 
     const firstArray = array.reduce(function(a, b) {
         return a.concat(b);
     });
 
+   
 
     if (firstArray.length === 0) {
 
@@ -38,8 +53,10 @@ const collect = function(array) {
       
     } else {
      
-   
+
+
    const res = firstArray.some(elem => typeof elem === 'object');
+
 
 
     if (res) {
@@ -76,5 +93,6 @@ console.log(collect(array4)); // 0
 
 const array5 = [[[[[], 3]]]];
 console.log(collect(array5)); // 3
+
 
 exports.collect = collect;
