@@ -33,7 +33,7 @@ const array = [
 
 const inspect = function (array) {
 
-    if (typeof array !== 'object') {
+    if (!Array.isArray(array)) {
 
         throw new Error ('message is not Array')
     }
